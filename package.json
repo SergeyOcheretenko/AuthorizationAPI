@@ -1,0 +1,29 @@
+{
+  "name": "authorization-api",
+  "version": "1.0.0",
+  "description": "Authorization API",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeyOcheretenko/AuthorizationAPI.git"
+  },
+  "keywords": [
+    "authorization",
+    "api",
+    "typescript"
+  ],
+  "author": "Sergey Ocheretenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SergeyOcheretenko/AuthorizationAPI/issues"
+  },
+  "homepage": "https://github.com/SergeyOcheretenko/AuthorizationAPI#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
