@@ -13,8 +13,7 @@ export class UserController extends BaseController {
     }
 
     login(req: Request, res: Response, next: NextFunction) {
-        next(new HTTPError(401, 'Authorization error', 'login'));
-        // this.ok(res, 'login');
+        this.ok(res, 'login');
     }
 
     register(req: Request, res: Response, next: NextFunction) {
