@@ -1,22 +1,22 @@
 import express, { Express } from 'express';
 import { Server } from 'http';
-import { ExeptionFilter } from './errors/exeption.filter.js';
+import { inject, injectable } from 'inversify';
+import { IExeptionFilter } from './errors/exeption.filter.interface.js';
 import { ILogger } from './logger/logger.interface.js';
-import { LoggerService } from './logger/logger.service.js';
+import { TYPES } from './types.js';
 import { UserController } from './users/users.controller.js';
+import 'reflect-metadata';
 
+@injectable()
 export class App {
     app: Express;
     server: Server;
     port: number;
-    logger: ILogger;
-    userController: UserController;
-    exeptionFilter: ExeptionFilter;
 
     constructor(
-        logger: ILogger, 
-        userController: UserController,
-        exeptionFilter: ExeptionFilter
+        @inject(TYPES.ILogger) private logger: ILogger,
+        @inject(TYPES.UserController) private userController: UserController,
+        @inject(TYPES.IExeptionFilter) private exeptionFilter: IExeptionFilter   
     ) {
         this.app = express();
         this.port = 8000;

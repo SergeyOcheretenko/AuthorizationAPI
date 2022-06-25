@@ -26,6 +26,8 @@
   "homepage": "https://github.com/SergeyOcheretenko/AuthorizationAPI#readme",
   "dependencies": {
     "express": "^4.18.1",
+    "inversify": "^6.0.1",
+    "reflect-metadata": "^0.1.13",
     "tslog": "^3.3.3"
   },
   "devDependencies": {
