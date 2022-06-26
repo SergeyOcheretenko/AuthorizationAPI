@@ -7,7 +7,7 @@ import 'reflect-metadata';
 import { IUserController } from './users.controller.interface';
 import { UserLoginDto } from './dto/user-login.dto';
 import { UserRegisterDto } from './dto/user-register.dto';
-import { IUserService } from './dto/users.service.interface';
+import { IUserService } from './users.service.interface';
 import { HTTPError } from '../errors/http-error.class';
 import { ValidateMiddleware } from '../common/validate.middleware';
 
@@ -43,6 +43,6 @@ export class UserController extends BaseController implements IUserController {
 		if (!result) {
 			return next(new HTTPError(422, 'This user is existing'));
 		}
-		this.ok(res, { name: result.name, email: result.email });
+		this.ok(res, { id: result.id, email: result.email });
 	}
 }
