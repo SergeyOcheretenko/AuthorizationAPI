@@ -1,12 +1,12 @@
 import { Container, ContainerModule, interfaces } from 'inversify';
-import { App } from './app.js';
-import { ExeptionFilter } from './errors/exeption.filter.js';
-import { ILogger } from './logger/logger.interface.js';
-import { LoggerService } from './logger/logger.service.js';
-import { TYPES } from './types.js';
-import { IExeptionFilter } from './errors/exeption.filter.interface.js';
-import { UserController } from './users/users.controller.js';
-import { BaseController } from './common/base.controller.js';
+import { App } from './app';
+import { ExeptionFilter } from './errors/exeption.filter';
+import { ILogger } from './logger/logger.interface';
+import { LoggerService } from './logger/logger.service';
+import { TYPES } from './types';
+import { IExeptionFilter } from './errors/exeption.filter.interface';
+import { UserController } from './users/users.controller';
+import { BaseController } from './common/base.controller';
 
 export interface IBootstrapReturn {
 	appContainer: Container;
