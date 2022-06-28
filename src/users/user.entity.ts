@@ -29,7 +29,6 @@ export class User {
 	}
 
 	public async comparePassword(pass: string): Promise<boolean> {
-		console.log(pass, this._password);
 		return compare(pass, this._password);
 	}
 }
